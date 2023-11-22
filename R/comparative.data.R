@@ -18,7 +18,7 @@ comparative.data <- function(phy, data, names.col, vcv=FALSE, vcv.dim=2, na.omit
         if(is.na(namesInd)) {
             stop("Names column '",  names.col, "' not found in data frame '", data.name, "'")
         }
-	print(namesInd])
+	print(namesInd)
         rownames(data) <- as.character(data[,namesInd])
         # drop the names column
         data <- data[,-namesInd, drop=FALSE]
