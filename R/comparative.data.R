@@ -15,10 +15,10 @@ comparative.data <- function(phy, data, names.col, vcv=FALSE, vcv.dim=2, na.omit
         if(! is.data.frame(data)) stop("'data' must be an object of class 'data.frame'.")
         # ...contains the name column and make sure it is of mode character
         namesInd <- match(names.col, names(data))
-	print(namesInd)
         if(is.na(namesInd)) {
             stop("Names column '",  names.col, "' not found in data frame '", data.name, "'")
         }
+	print(as.character(data[,namesInd])
         rownames(data) <- as.character(data[,namesInd])
         # drop the names column
         data <- data[,-namesInd, drop=FALSE]
